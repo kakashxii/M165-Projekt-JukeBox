@@ -5,18 +5,85 @@ This Jukebox project is a school project for Module 165 in the second year. It a
 - Management: Add, edit, and delete stored music tracks.
 - Player: Search for music tracks, add tracks to a playlist, and play the playlist.
 
-## Setup
+## Prerequisites
 
-Follow these steps to set up the Jukebox project on Windows:
+- Python 3.x
+- MongoDB
 
-1. Open the Command Prompt or Terminal.
-2. Navigate to the project directory.
-3. Create a new directory for the project.
-4. Change to the project directory.
-5. Create a virtual environment using `venv`.
-6. Activate the virtual environment.
-7. Install the required Python packages using `pip`.
-8. Create your Python files and modules.
-9. Open the `jukebox.py` file and start implementing the Jukebox code.
+## Installation
 
-Feel free to customize and expand upon the project as needed for your school assignment. Good luck with your project!
+1. Clone the repository to your local machine:
+
+
+2. Navigate to the project directory:
+
+```
+cd M165-Projekt-Jukebox
+```
+
+
+3. Create a virtual environment:
+
+```
+python3 -m venv env
+```
+
+
+4. Activate the virtual environment:
+
+- For Linux/Mac:
+
+  ```
+  source env/bin/activate
+  ```
+
+- For Windows:
+
+  ```
+  .\env\Scripts\activate
+  ```
+
+5. Install the required dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+
+6. Set up the configuration file:
+
+- Create a `config.yml` file in the project directory.
+- Populate the `config.yml` file with the necessary configuration values. For example:
+
+  ```yaml
+  DB_HOST: mongodb://localhost:27017/
+  DB_NAME: jukebox
+  ```
+
+7. Start the application:
+
+```
+python main.py config.yml
+```
+
+
+## Usage
+
+- Search songs: Enter a search query to find songs by title, artist, album, or genre.
+- Add song: Add a new song to the collection by providing the required details.
+- Update song: Update an existing song's details by entering the song ID and providing updated information.
+- Delete song: Remove a song from the collection by entering the song ID.
+- Add song to playlist: Add a specific song to the playlist for playback.
+- Play playlist: Play the songs in the playlist.
+
+## Contributing
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Implement your feature or make changes to fix the bug.
+4. Commit and push your changes.
+5. Submit a pull request.
+
+
